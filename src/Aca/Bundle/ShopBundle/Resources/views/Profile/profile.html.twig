@@ -1,0 +1,153 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    <title>Your profile</title>
+{% endblock title %}
+
+{% block content %}
+
+    {% if loggedIn %}
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3>NAME</h3>
+                {% if nameMsg %}
+                    <span class="profileMsg">{{ nameMsg }}</span>
+                {% else %}
+                    <br />
+                {% endif %}
+
+                <form action="/profile" method="POST">
+                    <input class="profile" type="text" name="name" value="{{ name }}" />
+                    <br />
+                    <input class="btn btn-primary" type="submit" name="updateName" value="Update" />
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h3>USERNAME</h3>
+                {% if usernameMsg %}
+                    <span class="profileMsg">{{ usernameMsg }}</span>
+                {% else %}
+                    <br />
+                {% endif %}
+
+                <form action="/profile" method="POST">
+                    <input class="profile" type="text" name="username" value="{{ username }}" />
+                    <br />
+                    <input class="btn btn-primary" type="submit" name="updateUsername" value="Update" />
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h3>PASSWORD</h3>
+                {% if passwordMsg %}
+                    <span class="profileMsg">{{ passwordMsg }}</span>
+                {% else %}
+                    <br />
+                {% endif %}
+
+                <form action="/profile" method="POST">
+                    <input class="profile" type="password" name="password" value="" placeholder=" New password"/>
+                    <br />
+                    <input class="profile" type="password" name="passwordCheck" value="" placeholder=" New password (again)"/>
+                    <br />
+                    <input class="btn btn-primary" type="submit" name="updatePassword" value="Update" />
+                </form>
+            </div>
+        </div>
+
+
+        <br />
+        <hr />
+        <br />
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3>SHIPPING</h3>
+                {% if shippingMsg %}
+                    <span class="profileMsg">{{ shippingMsg }}</span>
+                {% else %}
+                    <br />
+                {% endif %}
+
+                <form action="/profile" method="POST">
+                    <input class="profile" type="text" name="shippingStreet" value="{{ shippingStreet }}" placeholder=" Street"/>
+                    <br />
+                    <input class="profile" type="text" name="shippingCity" value="{{ shippingCity }}" placeholder=" City"/>
+                    <br />
+                    <select class="profileSelect" name="shippingState" required>
+                        {% if shippingState == null %}
+                            <option value="" disabled selected>State</option>
+                        {% endif %}
+                        {% for state in states %}
+                            <option value="{{ state }}"
+                                    {% if state == shippingState %}
+                                        selected
+                                    {% endif %}
+                            >{{  state }}</option>
+                        {% endfor %}
+                    </select>
+                    <br />
+                    <input class="profile" type="text" name="shippingZip" value="{{ shippingZip }}" placeholder=" Zip"/>
+                    <br />
+                    <input class="btn btn-primary" type="submit" name="updateShipping" value="Update" />
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h3>BILLING</h3>
+                {% if billingMsg %}
+                    <span class="profileMsg">{{ billingMsg }}</span>
+                {% else %}
+                    <br />
+                {% endif %}
+
+                <form action="/profile" method="POST">
+                    <input class="profile" type="text" name="billingStreet" value="{{ billingStreet }}" placeholder=" Street"/>
+                    <br />
+                    <input class="profile" type="text" name="billingCity" value="{{ billingCity }}" placeholder=" City"/>
+                    <br />
+                    <select class="profileSelect" name="billingState" required>
+                        {% if billingState == null %}
+                            <option value="" disabled selected>State</option>
+                        {% endif %}
+                        {% for state in states %}
+                            <option value="{{ state }}"
+                                {% if state == billingState %}
+                                    selected
+                                {% endif %}
+                            >{{  state }}</option>
+                        {% endfor %}
+                    </select>
+                    <br />
+                    <input class="profile" type="text" name="billingZip" value="{{ billingZip }}" placeholder=" Zip"/>
+                    <br />
+                    <input class="btn btn-primary" type="submit" name="updateBilling" value="Update" />
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h3>EMAIL</h3>
+                {% if emailMsg %}
+                    <span class="profileMsg">{{ emailMsg }}</span>
+                {% else %}
+                    <br />
+                {% endif %}
+
+                <form action="/profile" method="POST">
+                    <input class="profile" type="text" name="email" value="{{ email }}" placeholder=" Email"/>
+                    <br />
+                    <input class="btn btn-primary" type="submit" name="updateEmail" value="Update" />
+                </form>
+            </div>
+        </div>
+
+    {% else %}
+
+        <span class="login-error">You must be logged in to view your profile.</span>
+        <br />
+        <br />
+        <a class="btn-href" href="/"><button class="btn btn-primary">Login</button></a>
+
+    {% endif %}
+
+{% endblock content %}

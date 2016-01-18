@@ -1,0 +1,8 @@
+aca_shop:
+    resource: "@AcaShopBundle/Resources/config/routing.yml"
+    # Any page that starts with '/' will be routed by the .yml specified above
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

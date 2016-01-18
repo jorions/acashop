@@ -1,0 +1,33 @@
+services:
+#    aca_shop.example:
+#        class: Aca\Bundle\ShopBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+  # when you get a service from the services container it is a singleton
+
+  # the given name is how we will refer to it throughout the code
+  acadb:
+    # we get this class from the provided Simplon literature
+    class: Simplon\Mysql\Mysql
+    # the arguments are also in the Simplon literature (under "setup")
+    # the arguments are being referred to and taken from the parameters.yml file
+    arguments: [%database_host%, %database_user%, %database_password%, %database_name%]
+
+
+  cart:
+    class: Aca\Bundle\ShopBundle\Service\CartService
+    arguments: [@acadb, @session]
+
+
+  login:
+    class: Aca\Bundle\ShopBundle\Service\LoginService
+    arguments: [@acadb, @session]
+
+
+  profile:
+    class: Aca\Bundle\ShopBundle\Service\ProfileService
+    arguments: [@acadb, @session, @login]
+
+  order:
+    class: Aca\Bundle\ShopBundle\Service\OrderService
+    arguments: [@acadb, @session, @cart]

@@ -1,0 +1,66 @@
+aca_shop_homepage_route:
+    path: /
+    # This represents the BundleFolder:ControllerName("Controller" is assumed):MethodName("Action" is assumed)
+    defaults: {_controller: AcaShopBundle:Login:loginForm }
+    # This indicates the HTTP verbs ("types of action against the endpoint") that the routing path can use
+    methods: [GET, POST]
+
+aca_logout_route:
+    path: /logout
+    defaults: {_controller: AcaShopBundle:Login:logout }
+    methods: [GET, POST]
+
+aca_registration_route:
+    path: /registration
+    defaults: {_controller: AcaShopBundle:Login:registration }
+    methods: [GET, POST]
+
+aca_products_route:
+    path: /products
+    defaults: {_controller: AcaShopBundle:Products:viewAll }
+    # Set to GET to prevent users from injecting POSTs into the URL to try to break the site
+    # This is best practice for content pages that aren't really receiving a GET or POST
+    methods: [GET]
+
+aca_product_page_route:
+    path: /products/{slug}
+    defaults: {_controller: AcaShopBundle:Products:viewProduct }
+    methods: [GET]
+
+# When the page is visited via GET it is a link-based visit, so just showCart
+aca_cart_route:
+    path: /cart
+    defaults: {_controller: AcaShopBundle:Cart:showCart }
+    methods: [GET]
+
+# When the page is visited via POST it is a form-based visit, so go to addCart first
+aca_cart_add_route:
+    path: /cart
+    defaults: {_controller: AcaShopBundle:Cart:addCart }
+    methods: [POST]
+
+aca_cart_update_route:
+    path: /updateCart
+    defaults: {_controller: AcaShopBundle:Cart:updateCart }
+    methods: [POST]
+
+# When the page is visited via POST it is a form-based visit, so go to addCart first
+aca_cart_remove_route:
+    path: /removeCart
+    defaults: {_controller: AcaShopBundle:Cart:removeCart }
+    methods: [POST]
+
+aca_profile_route:
+    path: /profile
+    defaults: {_controller: AcaShopBundle:Profile:profilePage }
+    methods: [GET, POST]
+
+aca_order_review_route:
+    path: /review_order
+    defaults: {_controller: AcaShopBundle:Order:reviewOrder }
+    methods: [GET, POST]
+
+aca_order_thank_you_route:
+    path: /thank_you
+    defaults: {_controller: AcaShopBundle:Order:thankYou }
+    methods: [GET]

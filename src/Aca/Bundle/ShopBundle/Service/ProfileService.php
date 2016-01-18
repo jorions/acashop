@@ -311,7 +311,7 @@ class ProfileService {
             if (preg_match("#^[a-zA-Z0-9]+$#", $username)) {
 
                 // Make sure username isn't already used
-                if ($this->login->checkRegistration($username, $this->session->get('password'), $this->session->get('password'), $this->session->get('name'))) {
+                if (!$this->usernameExists($username) {
 
                     // Set new username
                     $this->updateUsername($username);
@@ -340,6 +340,33 @@ class ProfileService {
         }
 
         return $msg;
+    }
+
+    /**
+     * Determine if a username already exists
+     * @param $username
+     * @return bool
+     */
+    public function usernameExists($username)
+    {
+
+        $query = '
+                SELECT
+                  *
+                FROM
+                  aca_user
+                WHERE
+                  username= :username';
+
+        $data = $this->db->fetchRow($query, array('username' => $username));
+
+        // If the username isn't used elsewhere, return false
+        if(empty($data)) {
+
+            return false;
+        }
+
+        return true;
     }
 
     /**

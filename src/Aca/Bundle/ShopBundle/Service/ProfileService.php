@@ -311,7 +311,7 @@ class ProfileService {
             if (preg_match("#^[a-zA-Z0-9]+$#", $username)) {
 
                 // Make sure username isn't already used
-                if (!$this->usernameExists($username) {
+                if (!$this->usernameExists($username)) {
 
                     // Set new username
                     $this->updateUsername($username);
@@ -344,7 +344,7 @@ class ProfileService {
 
     /**
      * Determine if a username already exists
-     * @param $username
+     * @param string $username
      * @return bool
      */
     public function usernameExists($username)

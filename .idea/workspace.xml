@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4795a69e-5fb0-4126-80d0-cdced135aa40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Service/ProfileService.php" afterPath="$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Service/ProfileService.php" />
     </list>
     <ignored path="acashop.iws" />
@@ -180,7 +179,7 @@
       <file leaf-file-name="receipt.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Resources/views/Email/receipt.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-6.259259">
               <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
@@ -190,14 +189,14 @@
       <file leaf-file-name="ProfileService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Service/ProfileService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.5945945">
-              <caret line="538" column="20" selection-start-line="538" selection-start-column="20" selection-end-line="538" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.21252796">
+              <caret line="318" column="0" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
               <folding>
-                <marker date="1453096294775" expanded="true" signature="4213:4412" placeholder="SELECT id FR..aca_user..." />
-                <marker date="1453096294775" expanded="true" signature="10638:10772" placeholder="SELECT * FRO..aca_user..." />
-                <marker date="1453096294775" expanded="true" signature="13742:13848" placeholder="SELECT * FRO..aca_user..." />
-                <marker date="1453096294775" expanded="true" signature="16146:16350" placeholder="SELECT id FR..aca_address..." />
-                <marker date="1453096294775" expanded="true" signature="16930:17062" placeholder="SELECT * FRO..aca_address..." />
+                <marker date="1453097054567" expanded="true" signature="4213:4412" placeholder="SELECT id FR..aca_user..." />
+                <marker date="1453097054567" expanded="true" signature="10646:10780" placeholder="SELECT * FRO..aca_user..." />
+                <marker date="1453097054567" expanded="true" signature="13750:13856" placeholder="SELECT * FRO..aca_user..." />
+                <marker date="1453097054567" expanded="true" signature="16154:16358" placeholder="SELECT id FR..aca_address..." />
+                <marker date="1453097054567" expanded="true" signature="16938:17070" placeholder="SELECT * FRO..aca_address..." />
               </folding>
             </state>
           </provider>
@@ -1822,14 +1821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Resources/views/Email/receipt.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Resources/views/Order/review.order.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1908,16 +1899,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Resources/views/Email/receipt.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.259259">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Aca/Bundle/ShopBundle/Service/ProfileService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.5945945">
-          <caret line="538" column="20" selection-start-line="538" selection-start-column="20" selection-end-line="538" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.21252796">
+          <caret line="318" column="0" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
           <folding>
-            <marker date="1453096294775" expanded="true" signature="4213:4412" placeholder="SELECT id FR..aca_user..." />
-            <marker date="1453096294775" expanded="true" signature="10638:10772" placeholder="SELECT * FRO..aca_user..." />
-            <marker date="1453096294775" expanded="true" signature="13742:13848" placeholder="SELECT * FRO..aca_user..." />
-            <marker date="1453096294775" expanded="true" signature="16146:16350" placeholder="SELECT id FR..aca_address..." />
-            <marker date="1453096294775" expanded="true" signature="16930:17062" placeholder="SELECT * FRO..aca_address..." />
+            <marker date="1453097054567" expanded="true" signature="4213:4412" placeholder="SELECT id FR..aca_user..." />
+            <marker date="1453097054567" expanded="true" signature="10646:10780" placeholder="SELECT * FRO..aca_user..." />
+            <marker date="1453097054567" expanded="true" signature="13750:13856" placeholder="SELECT * FRO..aca_user..." />
+            <marker date="1453097054567" expanded="true" signature="16154:16358" placeholder="SELECT id FR..aca_address..." />
+            <marker date="1453097054567" expanded="true" signature="16938:17070" placeholder="SELECT * FRO..aca_address..." />
           </folding>
         </state>
       </provider>

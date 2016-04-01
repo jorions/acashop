@@ -2,8 +2,7 @@
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
 # http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    #database_host: 52.34.60.32
-    database_host: 10.10.10.60
+    database_host: portfolio-acashop.cuoewwxgjc77.us-west-2.rds.amazonaws.com
     database_port: 3306
     database_name: ~
     database_user: ~
